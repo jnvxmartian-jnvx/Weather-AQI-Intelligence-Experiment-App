@@ -1,3 +1,6 @@
-Reportlab
+reportlab
 folium
 streamlit-folium
+matplotlib
+numpy
+pandas
