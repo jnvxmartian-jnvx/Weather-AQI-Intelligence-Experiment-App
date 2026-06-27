@@ -1,0 +1,28 @@
+import streamlit as st
+import pandas as pd
+
+st.set_page_config(
+    page_title="Weather & AQI Intelligence Center",
+    layout="wide"
+)
+
+st.title("🌍 Weather & AQI Intelligence Center")
+
+df = pd.read_csv("cleaned_weather_data.csv")
+
+st.header("Dataset Preview")
+
+st.dataframe(df.head())
+
+st.header("Dataset Statistics")
+
+col1, col2, col3 = st.columns(3)
+
+with col1:
+    st.metric("Total Records", len(df))
+
+with col2:
+    st.metric("Total Cities", df["City"].nunique())
+
+with col3:
+    st.metric("Total States", df["State"].nunique())
