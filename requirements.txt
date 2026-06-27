@@ -1,1 +1,3 @@
 Reportlab
+folium
+streamlit-folium
